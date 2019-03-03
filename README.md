@@ -2,12 +2,14 @@
 
 O projeto Data Lovers foi desenvolvido para Bootcamp da Laboratoria com o  objetivo de criar uma **página  web** que permita visualizar um **conjunto (set) de dados** usando conhecimento de UX, UI, JavaScript(ES6), HTML5 e CSS.
 
-Ficou curioso? 
+Ficou curiosa? 
 
-Olhe aqui um pouco de como foram feitos  os **protótipos** deste produto.
+Olhe aqui um pouco de como foram feitos  os **protótipos** deste produto. 
 
-Veja : [Protótipo 1](https://marvelapp.com/43bg5ii)
+O processo de desenvolvimento não é nada fácil, exige  pensar em uma persona e suas necessidades e por último compilar todas essas informações para criar   uma interface fácil e que atenda expectativas. 
 
-Veja  : [Protótipo 2](https://marvelapp.com/3e61347)
+Acreditamos que estamos no caminho satisfatório para nossos usuários e vamos melhorar cada vez mais!.
 
-veja: [Protótipo Testado e Aprovado](https://marvelapp.com/b312iaa) 
+Veja: [Protótipo 1](https://marvelapp.com/3e61347)
+
+veja: [Protótipo estamos quase lá!](https://marvelapp.com/4fd2d6a) 

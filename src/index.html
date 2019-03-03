@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body>
+  <header class="">
+    <h1 class="">Inicial</h1>
+    <select class="drop-filter">
+      <option value="">Filtrar por Classe</option>
+      <option value="Assassin">Assassinos</option>
+      <option value="Fighter">Lutadores</option>
+      <option value="Mage">Mago</option>
+      <option value="Support">Suporte</option>   
+    </select>
+    <select class="drop-order">
+      <option value="">Ordenar por</option>
+      <option value="">Força</option>
+      <option value="">Ataque</option>
+      <option value="">Defesa</option>
+      <option value="">Magia</option>
+    </select>
+  </header>
+  <section class="content">
+    <h2 class="card-subtitle"></h2>
+    <div class="card-content"></div>
+  </section>
+  
+  <script src="./data/lol/lol.js"></script>
+  <script src="main.js"></script>
+</body>
 </html>
+
+
