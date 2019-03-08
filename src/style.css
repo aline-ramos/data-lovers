@@ -13,8 +13,38 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ccc;
   padding: 10px;
+  text-align: left;
+  background-color: #FFFF;
+  background-color: #000;
+}
+
+.icon img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.icon {
+  text-align: start;
+
+}
+
+.drop-filter {
+  border-radius: 50px;
+  width: 150px;
+  font-size: 16px;
+  padding-left: 4px;
+  color: rgb(245, 241, 241);
+  background-color: #000;
+}
+
+.drop-order {
+  border-radius: 50px;
+  width: 150px;
+  font-size: 16px;
+  padding-left: 4px;
+  color: rgb(245, 241, 241);
+  background-color: #000;
 }
 
 .content {
@@ -35,11 +65,13 @@ body {
 .card-subtitle {
   margin-bottom: 10px;
   width: 100%;
+  font-style: oblique;
 }
 
 .card-img {
   display: block;
   width: 100%;
+  border-radius: 2px; 
 }
 
 .card-title {
@@ -50,8 +82,14 @@ body {
 
 .card-list {
   list-style: none;
+  text-align: center;
+  border: #CCC 1px solid;
+  border-radius: 2px;
 }
+
 
 .card-item {
   font-size: 13px;
 }
+
+
