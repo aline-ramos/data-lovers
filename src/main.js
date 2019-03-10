@@ -1,35 +1,51 @@
 const LOL_CARD = LOL.data;
-console.log(LOL_CARD);
 
 const LOL_VALUES = Object.values(LOL_CARD);
-console.log(LOL_VALUES);
+
+const cardContent = document.querySelector(".card-content");
+const cardSearch = document.querySelector(".card-search");
 
 let dropFilter = "";
 let dropOrder = "";
 
-const lolTemplate = card => {
-  return `<div class="card">
-  <h3 class="card-title">${card.name}</h3>
-  <img src="${card.splash}" alt="Imagem do personagem ${card.name}" class="card-img">
-  <ul class="card-list">
-    <li class="card-item">Ataque: ${card.info.attack}</li>
-    <li class="card-item">Defesa: ${card.info.defense}</li>
-    <li class="card-item">Magia: ${card.info.magic}</li>
-    <li class="card-item">Dificuldade: ${card.info.difficulty}</li>
-  </ul>
-  </div>`;
+const TAGS_EN = {
+  "Assassin": "Assassinos",
+  "Fighter": "Lutador",
+  "Mage": "Mago",
+  "Marksman": "Atirador",
+  "Support": "Suporte",
+  "Tank": "Tanque"
 };
 
+const lolTemplate = card => {
+  const tagList = card.tags.map(item => TAGS_EN[item]).join(', ');
+  
+  return `<div class="card">
+    <div class="card-front">
+      <h3 class="card-title">${card.name} <span class="card-subtitle">${card.title}</span></h3>
+      <img src="${card.splash}" alt="Imagem do personagem ${card.name}" class="card-img">
+      <ul class="card-list">
+        <li class="card-item">Ataque: ${card.info.attack}</li>
+        <li class="card-item">Defesa: ${card.info.defense}</li>
+        <li class="card-item">Magia: ${card.info.magic}</li>
+        <li class="card-item">Dificuldade: ${card.info.difficulty}</li>
+      </ul>
 
+      <p class="card-tags">Tags: ${tagList}</p>
+    </div>
+    <div class="card-back">
+      <p class="card-subtitle">${card.blurb}</p>
+    </div>
+  </div>`;
+};
 
 
 // lista todos os cards sem nenhum filtro - begin
 const LOL_CARDS = LOL_VALUES.map(card => {
   return lolTemplate(card);
 });
-console.log(LOL_CARDS.length);
 
-document.querySelector(".card-content").innerHTML = LOL_CARDS.join("");
+cardContent.innerHTML = LOL_CARDS.join("");
 // lista todos os cards sem nenhum filtro - end
 
 
@@ -44,9 +60,9 @@ document.querySelector(".drop-filter").addEventListener("change", event => {
   }).map(card => {
     return lolTemplate(card);
   });
-  console.log(LOL_CARDS.length);
-  
-  document.querySelector(".card-content").innerHTML = LOL_CARDS.join("");
+
+  cardSearch.innerHTML = `Foram encontrados ${LOL_CARDS.length} ítens da classe ${TAGS_EN[dropFilter]}`;
+  cardContent.innerHTML = LOL_CARDS.join("");
 });
 // adiciona o evento ao Filtrar por Classe - end
 
@@ -62,9 +78,8 @@ document.querySelector(".drop-order").addEventListener("change", event => {
   }).map(card => {
     return lolTemplate(card);
   });
-  console.log(LOL_CARDS.length);
   
-  document.querySelector(".card-content").innerHTML = LOL_CARDS.join("");
+  cardContent.innerHTML = LOL_CARDS.join("");
 });
 // adiciona o evento ao Ordenar por - end
 
