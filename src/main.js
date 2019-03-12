@@ -49,8 +49,6 @@ cardContent.innerHTML = LOL_CARDS.join("");
 // lista todos os cards sem nenhum filtro - end
 
 
-
-
 // adiciona o evento ao Filtrar por Classe - begin
 document.querySelector(".drop-filter").addEventListener("change", event => {
   dropFilter = event.target.value;
@@ -67,8 +65,6 @@ document.querySelector(".drop-filter").addEventListener("change", event => {
 // adiciona o evento ao Filtrar por Classe - end
 
 
-
-
 // adiciona o evento ao Ordenar por - begin
 document.querySelector(".drop-order").addEventListener("change", event => {
   dropOrder = event.target.value;
@@ -82,9 +78,6 @@ document.querySelector(".drop-order").addEventListener("change", event => {
   cardContent.innerHTML = LOL_CARDS.join("");
 });
 // adiciona o evento ao Ordenar por - end
-
-
-
 
 document.querySelectorAll(".card-img").forEach(cardImg => {
   cardImg.addEventListener("click", event => {
