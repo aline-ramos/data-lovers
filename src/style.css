@@ -1,12 +1,19 @@
 body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
+ 
+}
+
+header{
+  background-image: url("../images/Lol-Champions.jpg");
+  background-size: 23%;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+ 
 }
 
 .content-top {
@@ -15,7 +22,7 @@ body {
   left: 0;
   width: 100%;
   padding: 10px;
-  background-color: #555;
+  background-color:black;
   z-index: 9;
 }
 
@@ -30,7 +37,7 @@ body {
   width: 150px;
   padding-left: 5px;
   color: rgb(245, 241, 241);
-  background-color: #555;
+  background-color:black;
 }
 
 .content {
@@ -125,6 +132,5 @@ body {
   font-size: 13px;
   text-align: center;
 }
-
 
 

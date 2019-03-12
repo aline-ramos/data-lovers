@@ -19,7 +19,7 @@ const TAGS_EN = {
 
 const lolTemplate = card => {
   const tagList = card.tags.map(item => TAGS_EN[item]).join(', ');
-  
+
   return `<div class="card">
     <div class="card-front">
       <h3 class="card-title">${card.name} <span class="card-subtitle">${card.title}</span></h3>
@@ -54,7 +54,7 @@ cardContent.innerHTML = LOL_CARDS.join("");
 // adiciona o evento ao Filtrar por Classe - begin
 document.querySelector(".drop-filter").addEventListener("change", event => {
   dropFilter = event.target.value;
-  
+
   const LOL_CARDS = LOL_VALUES.filter(card => {
     return card.tags.indexOf(dropFilter) >= 0;
   }).map(card => {
@@ -72,13 +72,13 @@ document.querySelector(".drop-filter").addEventListener("change", event => {
 // adiciona o evento ao Ordenar por - begin
 document.querySelector(".drop-order").addEventListener("change", event => {
   dropOrder = event.target.value;
-  
+
   const LOL_CARDS = LOL_VALUES.sort((cardA, cardB) => {
     return cardB.info[dropOrder] - cardA.info[dropOrder];
   }).map(card => {
     return lolTemplate(card);
   });
-  
+
   cardContent.innerHTML = LOL_CARDS.join("");
 });
 // adiciona o evento ao Ordenar por - end
