@@ -3,6 +3,11 @@ body {
   font-size: 16px;
 }
 
+header {
+  background-image: url("../images/Lol-Champions.jpg");
+  background-size: 23%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,7 +20,7 @@ body {
   left: 0;
   width: 100%;
   padding: 10px;
-  background-color: #555;
+  background-color:black;
   z-index: 9;
 }
 
@@ -26,11 +31,12 @@ body {
 
 .drop-filter,
 .drop-order {
+  border: 0;
   border-radius: 50px;
   width: 150px;
   padding-left: 5px;
   color: rgb(245, 241, 241);
-  background-color: #555;
+  background-color:black;
 }
 
 .content {
@@ -45,6 +51,7 @@ body {
 .card-content {
   display: flex;
   flex-wrap: wrap;
+  perspective: 1000;
 }
 
 .card {
@@ -52,15 +59,8 @@ body {
   width: 25%;
   height: 100%;
   margin-bottom: 10px;
-  border: 1px solid #CCC;
   margin-right: 10px;
   min-height: 350px;
-  transform-style: preserve-3d;
-  transition: all 600ms ease-in;
-}
-
-.card:hover {
-  transform: rotateY(180deg);
 }
 
 .card:nth-child(1n) {
@@ -76,16 +76,25 @@ body {
   width: 100%;
   height: 100%;
   padding: 10px;
+  border: 1px solid #CCC;
   background-color: #f5f5f5;
+  transition: 1s all ease;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
 }
 
-.card-front {
+.card:hover .card-front {
+  transform: rotateY(180deg);
   z-index: 2;
+}
+
+.card:hover .card-back {
+  transform: rotateY(0deg);
 }
 
 .card-back {
   transform: rotateY(180deg);
-  z-index: 1;
 }
 
 .card-subtitle {
@@ -125,6 +134,5 @@ body {
   font-size: 13px;
   text-align: center;
 }
-
 
 
